@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.4.js"
+        integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="">
+        <label for="">すきなこと</label><br>
+        <input type="text" id="sukinakoto" value=""><br>
+        <button id="checkButton" value="">クリックしてね</button>
+    </form>
+
+    <p id="aaaaa"></p>
+    <script>
+
+
+        let sukinakotoDaze = "";
+
+        $('#sukinakoto').on('change', function () {
+            let sukinakotoValu = $('#sukinakoto').val();
+            sukinakotoDaze = sukinakotoValu;
+        });
+
+        $('#checkButton').on('click', function () {
+            console.log(sukinakotoDaze);
+        });
+
+
+
+
+
+    </script>
+</body>
+
+</html>
