@@ -11,50 +11,56 @@
 </head>
 
 <body>
-    <h1>山田太郎さん</h1>
+    <h1>ペルソナ</h1>
     <p>こんな人をランダムで用意する</p>
     <img src="./asset/img/cooking_tousyoumen.png" alt="" width="200px" id="cookingTousyoumen">
 
     <form action="">
-        山田さんは <input type="text" id="customerGain" value=""> を実現したい。<br>
-        しかし、<input type="text" id="customerPain" value="">という悩みを抱えている<br>
-        そのために<input type="text" id="customerJob" value="">をしている<br>
+        <label for="">この人が欲しいものは何？</label><br>
+        <input type="text" id="customerGain" value=""><br>
+        <label for="">欲しいものを獲得するための障害は何？</label><br>
+        <input type="text" id="customerPain" value=""><br>
+        <label for="">このひとは障害を取り除くために何をしている</label><br>
+        <input type="text" id="customerJob" value=""><br>
+        <label for="">あなたができることは？</label><br>
+        <input type="text" id="yourSolution" value=""><br>
         <button id="checkButton" value="">クリックしてね</button>
     </form>
-    <h2>山田さんの状況</h2>
-    山田さんは
-    <ul>
-        <li><span id="customerSituation01"></span>を実現したいが</li>
-        <li><span id="customerSituation02"></span>という悩みを抱えている</li>
-        <li>そのために<span id="customerSituation03"></span>をしている</li>
-    </ul>
-    <p id="customerSituation"></p>
+    <h2>あなたのキャッチコピーは</h2>
+    <p id="yourCatchCopy">ここにでる</p>
+
+    <h2>合体キャッチコピー</h2>
+    <form action="">
+        <label for="">追加するコピー</label><br>
+        <input type="text" id="addCatchCopy" value=""><br>
+        <button id="conboButton" value="">合体してね</button>
+    </form>
+    <h2>合体キャッチコピーキャッチコピーは</h2>
+    <p id="conboCatchCopy">ここにでる</p>
+
+
 
     <script>
 
 
-        // ページのDOMツリーを読み込む
+
         $(document).ready(function () {
 
-            // 山田さんのinputのvalueを代入するための変数を宣言
-            let customerGain;
-            let customerPain;
-            let customerJob;
 
-            // input#customerGain のvalueを取得
-            $('#customerGain,#customerPain,#customerJob').change(function () {
-                // valueから取得した値を変数に格納
-                customerGain = $('#customerGain').val();
-                customerPain = $('#customerPain').val();
-                customerJob = $('#customerJob').val();
+
+            let customerGain01 = "ともと";
+
+            // formのinputノ値を取得
+            $('#customerGain').change(function () {
+                let customerGain = $('#customerGain').val();
+                customerGain02 = customerGain;
+                customerGain01 = customerGain02 + customerGain01
             });
 
-            // buttoncheckButtonをクリックして山田さんの状況を表示
+            // <button>をクリック
             $('#checkButton').click(function (e) {
                 e.preventDefault(); // フォームのデフォルト動作を無効化
-                $('#customerSituation01').html(customerGain);
-                $('#customerSituation02').html(customerPain);
-                $('#customerSituation03').html(customerJob);
+                $('#yourCatchCopy').html(customerGain01);
             });
 
             // formのinputノ値を取得
@@ -69,6 +75,8 @@
                 e.preventDefault(); // フォームのデフォルト動作を無効化
                 $('#conboCatchCopy').html(customerGain01 + addCatchCopy01);
             });
+
+
 
 
         });
