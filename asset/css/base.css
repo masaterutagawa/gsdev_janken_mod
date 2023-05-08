@@ -1,0 +1,56 @@
+@charset "UTF-8";
+
+html {
+    font-size: 62.5%;
+    /* フォントサイズ16pxを10pxに */
+}
+
+body {
+    font-size: 1.6rem;
+    background-color: #ffffff;
+    font-family:
+        system-ui,
+        -apple-system,
+        /* Firefox supports this but not yet `system-ui` */
+        'Segoe UI',
+        Roboto,
+        Helvetica,
+        Arial,
+        sans-serif,
+        'Apple Color Emoji',
+        'Segoe UI Emoji';
+}
+
+h2,p{
+    margin-bottom: 1rem;
+}
+
+#content__wrapper{
+        width: 960px;
+
+        margin: 0 auto;
+}
+
+#persona__wrapper{
+    display: flex;
+    flex-direction: row;
+    background-color: beige;
+    margin-bottom: 6rem;
+    padding: 2rem;
+}
+
+.persona__ph {
+    width: 200px;
+
+}
+
+.persona__profile{
+    width: 660px;
+
+}
+
+#persona__question,#your__question01,#your__question02,#your__question03,#your__question04,#your__solution{
+    margin-bottom: 6rem;
+    background-color: beige;
+    padding: 2rem;
+}

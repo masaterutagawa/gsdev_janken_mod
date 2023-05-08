@@ -5,70 +5,357 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./asset/css/import.css">
     <script src="https://code.jquery.com/jquery-3.6.4.js"
         integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
     <title>Document</title>
 </head>
 
 <body>
-    <h1>山田太郎さん</h1>
-    <p>こんな人をランダムで用意する</p>
-    <img src="./asset/img/cooking_tousyoumen.png" alt="" width="200px" id="cookingTousyoumen">
+    <!-- start スタート画面  -->
+    <section id="app__title__screen">
+        <p id="persona__generate"><a href="">ペルソナ選択</a></p>
+    </section><!-- /#app__title__screen -->
+    <!-- end スタート画面 -->
 
-    <form action="">
-        山田さんは <input type="text" id="customerGain" value=""> を実現したい。<br>
-        しかし、<input type="text" id="customerPain" value="">という悩みを抱えている<br>
-        そのために<input type="text" id="customerJob" value="">をしている<br>
-        <button id="checkButton" value="">クリックしてね</button>
-    </form>
-    <h2>山田さんの状況</h2>
-    山田さんは
-    <ul>
-        <li><span id="customerSituation01"></span>を実現したいが</li>
-        <li><span id="customerSituation02"></span>という悩みを抱えている</li>
-        <li>そのために<span id="customerSituation03"></span>をしている</li>
-    </ul>
-    <p id="customerSituation"></p>
+    <!-- start アプリ  -->
+    <section id="content__wrapper">
+        <h2>弊社のお客様にこのような方がいらっしゃいます。</h2>
+        <h3>お客様のプロフィール</h3>
+        <div id="persona__wrapper">
+            <div class="persona__ph">
+                <img src="" alt="" width="" class="persona__img">
+                <p class="persona__name"></p>
+            </div>
+            <!--personaPh  -->
+            <div class="persona__profile">
+                <dl>
+                    <dt>年齢</dt>
+                    <dd class="persona__age"></dd>
+                    <dt>職業</dt>
+                    <dd class="persona__work"></dd>
+                    <dt>プロフィール</dt>
+                    <dd class="persona__profile__txt">
+                    </dd>
+                </dl>
+            </div>
+        </div><!-- /#persona__wrapper  -->
+        <div id="persona__question">
+            <h2>プロフィールを読んで、以下にお答え下さい。</h2>
+            <div id="form__customer__situation">
+                <form action="">
+                    佐藤さんが実現したいことは <input type=" text" id="customer__gain" value=""> です。<br>
+                    実現するにあたり <input type="text" id="customer__pain" value=""> という問題を抱えている。<br>
+                    その問題みを解決するために <input type="text" id="customer__job" value=""> をしている。<br>
+                    <button id="customer__situation__button" value="">クリック</button>
+                </form>
+            </div><!-- /#form__customer__situation -->
+        </div><!-- /#persona__question  -->
 
+        <div id="your__question01">
+            <h2>あなたへ質問です</h2>
+            <p>佐藤さんの置かれている状況を踏まえ、あなたができることは何がありますか？</p>
+            <h2>佐藤さんの置かれている状況</h2>
+            <p>
+                佐藤さんが実現したいことは<span id="customer__situation01"></span>です。<br>
+                実現するにあたり<span id="customer__situation02"></span>という問題を抱えている。<br>
+                その悩問題みを解決するために<span id="customer__situation03"></span>をしている。
+            </p>
+            <form action="" id="form__your__solution__value">
+                私は <input type="text" id="your__solution__value" value=""> ができます。<br>
+                <button id="your__solution__button" value="">クリック</button>
+            </form>
+        </div><!-- /#your__question01  -->
+        <div id="your__question02">
+            <h2>あなたができること</h2>
+            <p>佐藤さんの置かれている状況に対して私は<span id="your__solution__content"></span>ができます。</p>
+
+            <h2>あなたができることへの質問です</h2>
+            <div id="form__your__solution__addvalue">
+                <form action="">
+                    それは、どのような特徴がありますか？<br>
+                    <input type="text" id="your__solution__feature" value=""><br>
+                    それは、どのような効果がありますか？<br>
+                    <input type="text" id="your__solution__effect" value=""><br>
+                    それは、どのような実績がありますか？<br>
+                    <input type="text" id="your__solution__achievement" value=""><br>
+                    それは、どのような感情が生まれますか？<br>
+                    <input type="text" id="your__solution__emotions" value=""><br>
+                    それは、どのような違いがありますか？<br>
+                    <input type="text" id="your__solution__difference" value=""><br>
+                    それは、何かに喩えることはできますか？<br>
+                    <input type="text" id="your__solution__metaphor" value=""><br>
+                    それは、どのような結果をつくりますか？<br>
+                    <input type="text" id="your__solution__result" value=""><br>
+                    それは、どのような状態をつくりますか？<br>
+                    <input type="text" id="your__solution__situation" value=""><br>
+                    <button id="your__solution__addvalue__button" value="">クリック</button>
+                </form>
+            </div><!-- /#form__your__solution__addvalue -->
+
+            <h2>回答一覧</h2>
+
+            <dl>
+                <dt>どのような特徴がある？</dt>
+                <dd id="your__solution__feature__result"></dd>
+                <dt>どのような効果がある？</dt>
+                <dd id="your__solution__effect__result"></dd>
+                <dt>どのような実績がある？</dt>
+                <dd id="your__solution__achievement__result"></dd>
+                <dt>どのような感情がある？</dt>
+                <dd id="your__solution__emotions__result"></dd>
+                <dt>どのような違いがある？</dt>
+                <dd id="your__solution__difference__result"></dd>
+                <dt>何かに喩えると?</dt>
+                <dd id="your__solution__metaphor__result"></dd>
+                <dt>どのような結果をつくる？</dt>
+                <dd id="your__solution__result__result"></dd>
+                <dt>どのような状態をつくる？</dt>
+                <dd id="your__solution__situation__result"></dd>
+            </dl>
+        </div><!-- /#your__question02  -->
+
+        <div id="your__question03">
+            <h2>組み合わさるとどうなる？</h2>
+            <p id="kitaQ">ここをクリックするとランダムで組み合わせがでます</p>
+            <p id="your_solution_addvalue_comb">結果がでる</p>
+
+            <form action="" id="form__new__yoursolution__value">
+                <input type="text" id="new__yoursolution__value" value=""><br>
+                <button id="new__yoursolution__value__button" value="">クリック</button>
+            </form>
+
+            <p>新しい提案価値は<span class="new__yoursolution"></span>ですよん。</p>
+        </div><!-- /#your__question02  -->
+
+        <div id="your__question04">
+            <div id="your__solution">
+                <h2>あなたの提案価値</h2>
+                <p><span class="new__yoursolution"></span>を踏まえてあなたの提案価値を考えてみてください</p>
+                <form action="">
+                    私は<input type="text" id="" value="">な問題を<br>
+                    <input type="text" id="" value="">な方法で解決し<br>
+                    <input type="text" id="" value="">を作り出します。<br>
+                    <button id="" value="">クリック</button>
+                </form>
+                <p>あなたの提案価値は<span class="">ここに表示</span>ですよん。</p>
+            </div><!-- /#your__solution  -->
+        </div><!-- /#your__question03  -->
+
+
+
+
+    </section><!-- /#content__wrapper -->
+
+
+    <footer>
+        <p class="copyright">(C) Gawasan</p>
+    </footer>
     <script>
 
+
+
+        // 関数式 ペルソナ生成用の乱数生成
+        let personaGenerateNum = function () {
+            // 生成したい乱数をminからmaxで指定
+            const min = 1;
+            const max = 3;
+            // Math.randomで0以上1未満の乱数を生成し、Math.floorで小数点を切り落とす。切り落とすので+1を指定
+            const personaNum = Math.floor(Math.random() * (max - min + 1)) + min;
+            // 戻り値として乱数を返す
+            return personaNum;
+        };
+
+        // 関数式 付加価値の組み合わせ生成用の乱数生成
+        let yourSolutionAddvalueCombNum = function () {
+            // 生成したい乱数をminからmaxで指定
+            const min = 0;
+            const max = 7;
+            // Math.randomで0以上1未満の乱数を生成し、Math.floorで小数点を切り落とす。切り落とすので+1を指定
+            const yourSolutionAddvalueNum = Math.floor(Math.random() * (max - min + 1)) + min;;
+            // 戻り値として乱数を返す
+            return yourSolutionAddvalueNum;
+        };
 
         // ページのDOMツリーを読み込む
         $(document).ready(function () {
 
-            // 山田さんのinputのvalueを代入するための変数を宣言
+            // タイトル画面のみ表示させるため、id="content__wrapper"要素を非表示にする
+            $("#content__wrapper").hide();
+
+            // id="persona__generate"がして尾された要素をクリックしてペルソナを生成する
+            $('#persona__generate').click(function (e) {
+                e.preventDefault(); // <a>タグのデフォルト動作を無効化
+                // メインコンテンツを表示させる
+                $("#content__wrapper").show();
+                // アプリのスタート画面を非表示にする
+                $("#app__title__screen").hide();
+
+                if (personaGenerateNum() == 1) {
+                    $('.persona__ph').html('<img src="./asset/img/persona_01.png" alt="" width="" class="persona__img">');
+                    $('.persona__name').html('佐藤和馬');
+                    $('.persona__age').html('35歳');
+                    $('.persona__work').html('企画営業');
+                    $('.persona__profile__txt').html('九州大学卒業後、福岡市内のIT系企業に入社し、営業職として6年間勤務している。<br>主に大手企業を顧客として担当しており、顧客折衝や契約交渉を担当している。<br>佐藤さんは、最新のビジネス戦略やマーケティングに興味を持っており、新しいビジネスモデルやテクノロジーを習得したいと考えている。また、スキルアップのためのトレーニングやセミナーに参加したいと考えている。<br>目標は、自己成長とキャリアアップであり、将来的にはマネージャーやリーダーとしてチームを率いることを目指している。<br>最近、ビジネスコミュニティに参加したいと考えており、経験や知識を共有する場にも積極的に参加したいと考えている。<br>ビジネス書やニュース記事を読むことが好きで、ビジネスマガジンの定期購読もしている。<br>また、週に2回ジムに通っている。');
+                }
+                else if (personaGenerateNum() == 2) {
+                    $('.persona__ph').html('<img src="./asset/img/persona_02.png" alt="" width="" class="persona__img">');
+                    $('.persona__name').html('佐藤和馬');
+                    $('.persona__age').html('35歳');
+                    $('.persona__work').html('企画営業');
+                    $('.persona__profile__txt').html('プロフィール');
+                } else {
+
+                    $('.persona__ph').html('<img src="./asset/img/persona_03.png" alt="" width="" class="persona__img">');
+                    $('.persona__name').html('佐藤和馬');
+                    $('.persona__age').html('35歳');
+                    $('.persona__work').html('企画営業');
+                    $('.persona__profile__txt').html('プロフィール');
+                }
+            });
+
+
+            // ペルソナの置かれている状況用の変数を宣言
             let customerGain;
             let customerPain;
             let customerJob;
 
-            // input#customerGain のvalueを取得
-            $('#customerGain,#customerPain,#customerJob').change(function () {
+            // あなたの解決策を代入するための変数を宣言
+            let yourSolution;
+
+            // あなたの解決策の付加価値を代入するための変数を宣言
+            let yourSolutionFeature;
+            let yourSolutionEffect;
+            let yourSolutionAchievement;
+            let yourSolutionEmotions;
+            let yourSolutionDifference;
+            let yourSolutionMetaphor;
+            let yourSolutionResult;
+            let yourSolutionSituation;
+
+            // 提案価値の用の配列
+            let yourSolutionAddvalue = [];
+
+            // 提案価値をランダムに組み合わせるための変数を宣言
+            let AddvaluerandomIndex1 = Math.floor(Math.random() * yourSolutionAddvalue.length)
+            let AddvaluerandomIndex2 = Math.floor(Math.random() * yourSolutionAddvalue.length)
+
+            // 新しいあなたの解決策を代入するための変数を宣言
+            let newYourSolution
+
+
+
+
+
+            // ##form__customer__situation内にあるのformのvalueを取得
+            $('#form__customer__situation').change(function () {
                 // valueから取得した値を変数に格納
-                customerGain = $('#customerGain').val();
-                customerPain = $('#customerPain').val();
-                customerJob = $('#customerJob').val();
+                customerGain = $('#customer__gain').val();
+                customerPain = $('#customer__pain').val();
+                customerJob = $('#customer__job').val();
             });
 
-            // buttoncheckButtonをクリックして山田さんの状況を表示
-            $('#checkButton').click(function (e) {
+            // button#customerSituationButtonをクリックして山田さんの状況を表示
+            $('#customer__situation__button').click(function (e) {
                 e.preventDefault(); // フォームのデフォルト動作を無効化
-                $('#customerSituation01').html(customerGain);
-                $('#customerSituation02').html(customerPain);
-                $('#customerSituation03').html(customerJob);
-            });
-
-            // formのinputノ値を取得
-            $('#addCatchCopy').change(function () {
-                let addCatchCopy = $('#addCatchCopy').val();
-                addCatchCopy01 = addCatchCopy;
+                // 変数の値を指定したIDを持つ要素にに表示
+                $('#customer__situation01').html(customerGain);
+                $('#customer__situation02').html(customerPain);
+                $('#customer__situation03').html(customerJob);
             });
 
 
-            // <button>をクリック
-            $('#conboButton').click(function (e) {
+
+            // あなたのできること
+            $('#form__your__solution__value').change(function () {
+                // valueから取得した値を変数に格納
+                yourSolution = $('#your__solution__value').val();
+
+            });
+
+            // あなたのできること
+            $('#your__solution__button').click(function (e) {
                 e.preventDefault(); // フォームのデフォルト動作を無効化
-                $('#conboCatchCopy').html(customerGain01 + addCatchCopy01);
+                // 変数の値を指定したIDを持つ要素にに表示
+                $('#your__solution__content').html(yourSolution);
             });
+
+
+            // ##form__your__solution__addvalue内にあるのformのvalueを取得
+            $('#form__your__solution__addvalue').change(function () {
+                // valueから取得した値を変数に格納
+                yourSolutionFeature = $('#your__solution__feature').val();
+                yourSolutionEffect = $('#your__solution__effect').val();
+                yourSolutionAchievement = $('#your__solution__achievement').val();
+                yourSolutionEmotions = $('#your__solution__emotions').val();
+                yourSolutionDifference = $('#your__solution__difference').val();
+                yourSolutionMetaphor = $('#your__solution__metaphor').val();
+                yourSolutionResult = $('#your__solution__result').val();
+                yourSolutionSituation = $('#your__solution__situation').val();
+                yourSolutionAddvalue = [yourSolutionFeature, yourSolutionEffect, yourSolutionAchievement, yourSolutionEmotions, yourSolutionDifference, yourSolutionMetaphor, yourSolutionResult, yourSolutionSituation];
+                randomIndex1 = Math.floor(Math.random() * yourSolutionAddvalue.length);
+                console.log(randomIndex1);
+
+            });
+
+
+
+            // button##your__solution__buttonをクリックしてあなたの解決策をを表示
+            $('#your__solution__addvalue__button').click(function (e) {
+                e.preventDefault(); // フォームのデフォルト動作を無効化
+                // 変数の値を指定したIDを持つ要素にに表示
+                $('#your__solution__feature__result').html(yourSolutionFeature);
+                $('#your__solution__effect__result').html(yourSolutionEffect);
+                $('#your__solution__achievement__result').html(yourSolutionAchievement);
+                $('#your__solution__emotions__result').html(yourSolutionEmotions);
+                $('#your__solution__difference__result').html(yourSolutionDifference);
+                $('#your__solution__metaphor__result').html(yourSolutionMetaphor);
+                $('#your__solution__result__result').html(yourSolutionResult);
+                $('#your__solution__situation__result').html(yourSolutionSituation);
+                // console.log(yourSolutionAddvalue[0], yourSolutionAddvalue[1], yourSolutionAddvalue[2]);
+            });
+
+
+
+
+            // 提案価値の組み合わせ
+            $('#kitaQ').click(function () {
+                // 同じ配列要素が選ばれないようにする
+                while (AddvaluerandomIndex1 === AddvaluerandomIndex2) {
+                    AddvaluerandomIndex2 = Math.floor(Math.random() * yourSolutionAddvalue.length)
+                }
+                $('#your_solution_addvalue_comb').html(yourSolutionAddvalue[AddvaluerandomIndex1] + "と" + yourSolutionAddvalue[AddvaluerandomIndex2] + "を組み合わせたらどんな価値が生まれる？");
+            });
+
+
+
+            // 新しいあなたの提案価値
+            $('#form__new__yoursolution__value').change(function () {
+                // valueから取得した値を変数に格納
+                newYourSolution = $('#new__yoursolution__value').val();
+
+            });
+
+            // 新しいあなたの提案価値をひょうじ
+            $('#new__yoursolution__value__button').click(function (e) {
+                e.preventDefault(); // フォームのデフォルト動作を無効化
+                // 変数の値を指定したIDを持つ要素にに表示
+                $('.new__yoursolution').html(newYourSolution + yourSolutionFeature);
+            });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
         });
@@ -78,50 +365,6 @@
 
 
 
-
-
-    <script>
-// $(document).ready(function () {
-    // $('#checkButton').click(function (e) {
-    // e.preventDefault(); // フォームのデフォルト動作を無効化
-
-    // // 入力値を取得して変数に格納
-    // let name = $('#sukinakoto').val();
-    // let email = $('#aaaaa').val();
-    // let message = $('#bbbbb').val();
-
-    // // 取得した値を出力する
-    // $('#output').html('<li>名前: ' + name + '</li>
-    // <li>Eメール: ' + email + '</li>
-    // <li>メッセージ: ' + message + '</li>');
-    // });
-    // });
-
-
-
-    // $('#dekirukoto').remove();
-
-    // let sukinakotoDaze = "";
-    // let aaaaaDaze = "";
-
-    // $('#sukinakoto,#aaaa').on('change', function () {
-    // let sukinakotoValu = $('#sukinakoto').val();
-    // let aaaaaValu = $('#aaaaa').val();
-    // sukinakotoDaze = sukinakotoValu;
-    // aaaaaDaze = aaaaaValu;
-    // });
-    // console.log(sukinakotoDaze);
-    // console.log(aaaaaDaze);
-
-    // $('#checkButton').on('click', function () {
-
-    // $('#catchCopy').append(sukinakotoDaze);
-    // console.log(sukinakotoDaze);
-    // console.log(aaaaaDaze);
-    // });
-
-
-    </script>
 
 
 </body>
