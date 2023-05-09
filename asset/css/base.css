@@ -7,7 +7,7 @@ html {
 
 body {
     font-size: 1.6rem;
-    background-color: #ffffff;
+    line-height: 2.7rem;
     font-family:
         system-ui,
         -apple-system,
@@ -21,36 +21,150 @@ body {
         'Segoe UI Emoji';
 }
 
-h2,p{
-    margin-bottom: 1rem;
+.futoi_moji{
+    font-weight: bold;
+    padding: 0 0.3rem 0 0.3rem;
 }
+
+
+/* スタート画面 */
+
+#app__title__screen {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#app__title__screen h1{
+    margin-bottom: 2rem;
+}
+
+
+/* content__wrapper */
 
 #content__wrapper{
-        width: 960px;
-
-        margin: 0 auto;
+    width: 960px;
+    margin: 0 auto;
 }
 
-#persona__wrapper{
+/* ペルソナ画面 */
+
+.persona__wrapper{
+    margin: 5rem 0 6rem 0;
+    background-color: beige;
+    padding: 2rem;
+    border-radius: 2rem;
+}
+
+.persona__wrapper h2 {
+    margin: 0 0 1rem 0;
+}
+
+.persona {
     display: flex;
     flex-direction: row;
-    background-color: beige;
-    margin-bottom: 6rem;
     padding: 2rem;
 }
 
 .persona__ph {
-    width: 200px;
+    width: 240px;
+    margin-right:60px ;
+}
 
+.persona__ph p.persona__name{
+    font-weight: bold;
+    text-align: center;
+    margin: 1rem 0 0 0;
 }
 
 .persona__profile{
     width: 660px;
-
 }
 
-#persona__question,#your__question01,#your__question02,#your__question03,#your__question04,#your__solution{
+.persona__profile h3 {
+    margin: 0 0 0.5rem 0;
+}
+
+.persona__profile p {
+    margin: 0 0 1.6rem 0;
+}
+
+/* your__question */
+
+.your__question {
     margin-bottom: 6rem;
     background-color: beige;
     padding: 2rem;
+    border-radius: 2rem;
+}
+
+.your__question h2 {
+    margin: 0 0 1.6rem 0;
+}
+
+.your__question h3 {
+    margin: 0 0 0.5rem 0;
+}
+
+.your__question p {
+    margin: 0 0 3.2rem 0;
+}
+
+.your__question ul {
+    margin-bottom: 3rem;
+}
+
+.your__question li{
+    margin-bottom: 1rem;
+}
+
+.your__question dl{
+    margin: 0 0 0 0;
+}
+
+.your__question dt {
+    font-size: 1.6rem;
+    font-weight: bold;
+
+}
+.your__question dd {
+
+    margin-bottom: 2rem;
+}
+/* your__solution */
+
+.your__solution {
+    margin-bottom: 6rem;
+    background-color: beige;
+    padding: 2rem;
+    border-radius: 2rem;
+}
+
+.your__solution h2 {
+    margin: 0 0 1.6rem 0;
+}
+
+.your__solution h3 {
+    margin: 0 0 0.5rem 0;
+}
+
+.your__solution p {
+    margin: 0 0 3.2rem 0;
+}
+
+.your__solution ul {
+    margin-bottom: 3rem;
+}
+
+.your__solution li {
+    margin-bottom: 1rem;
+}
+
+/* footer */
+
+
+footer p.copyright{
+        text-align: center;
+margin-bottom: 2rem;
 }

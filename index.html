@@ -14,145 +14,271 @@
 <body>
     <!-- start スタート画面  -->
     <section id="app__title__screen">
-        <p id="persona__generate"><a href="">ペルソナ選択</a></p>
-    </section><!-- /#app__title__screen -->
+        <h1>あなたの提案価値を考えてみる</h1>
+        <form action="" id="form__yourname">
+            名前は <input type=" text" id="yourname" value="">です。
+            <button id="yourname__registration__button" value="">START</button>
+        </form>
+
+
+
+    </section>
     <!-- end スタート画面 -->
 
     <!-- start アプリ  -->
     <section id="content__wrapper">
-        <h2>弊社のお客様にこのような方がいらっしゃいます。</h2>
-        <h3>お客様のプロフィール</h3>
-        <div id="persona__wrapper">
-            <div class="persona__ph">
-                <img src="" alt="" width="" class="persona__img">
-                <p class="persona__name"></p>
-            </div>
-            <!--personaPh  -->
-            <div class="persona__profile">
-                <dl>
-                    <dt>年齢</dt>
-                    <dd class="persona__age"></dd>
-                    <dt>職業</dt>
-                    <dd class="persona__work"></dd>
-                    <dt>プロフィール</dt>
-                    <dd class="persona__profile__txt">
-                    </dd>
-                </dl>
-            </div>
-        </div><!-- /#persona__wrapper  -->
-        <div id="persona__question">
-            <h2>プロフィールを読んで、以下にお答え下さい。</h2>
-            <div id="form__customer__situation">
-                <form action="">
-                    佐藤さんが実現したいことは <input type=" text" id="customer__gain" value=""> です。<br>
-                    実現するにあたり <input type="text" id="customer__pain" value=""> という問題を抱えている。<br>
-                    その問題みを解決するために <input type="text" id="customer__job" value=""> をしている。<br>
-                    <button id="customer__situation__button" value="">クリック</button>
-                </form>
-            </div><!-- /#form__customer__situation -->
-        </div><!-- /#persona__question  -->
+        <section class="persona__wrapper">
+            <h2>お客様のプロフィール</h2>
+            <div class="persona">
+                <div class="persona__ph">
+                    <img src="#" alt="" width="" class="persona__img">
+                    <p class="persona__name"></p>
+                </div><!--personaPh  -->
+                <div class="persona__profile">
+                    <h3>年齢</h3>
+                    <p class="persona__age"></p>
+                    <h3>職業</h3>
+                    <p class="persona__work"></p>
+                    <h3>プロフィール</h3>
+                    <p class="persona__profile__txt"></p>
+                </div><!--persona__profile  -->
+            </div><!-- /.persona__wrapper  -->
+        </section><!-- /.persona__wrapper  -->
 
-        <div id="your__question01">
-            <h2>あなたへ質問です</h2>
-            <p>佐藤さんの置かれている状況を踏まえ、あなたができることは何がありますか？</p>
-            <h2>佐藤さんの置かれている状況</h2>
-            <p>
-                佐藤さんが実現したいことは<span id="customer__situation01"></span>です。<br>
-                実現するにあたり<span id="customer__situation02"></span>という問題を抱えている。<br>
-                その悩問題みを解決するために<span id="customer__situation03"></span>をしている。
-            </p>
+        <div class="your__question">
+            <h2><span class="targrt__persona__name">ペルソナ</span>さんはどんな状況に置かれていますか？</h2>
+
+            <form action="" id="form__customer__situation">
+                <ul>
+                    <li><span class="targrt__persona__name">ペルソナ</span>さんが実現したいことは <input type=" text"
+                            id="customer__gain" value=""> です。<br></li>
+                    <li>実現するにあたり <input type="text" id="customer__pain" value=""> という問題を抱えています。<br></li>
+                    <li>その問題を解決するために <input type="text" id="customer__job" value=""> をしています。<br></li>
+                </ul>
+                <button id="customer__situation__button" value="">クリック</button>
+            </form>
+
+        </div><!-- /.your__questionn  -->
+
+        <div class="your__question step01">
+            <h2><span class="your__name">あなた</span>さんへ質問です</h2>
+            <p><span class="persona__name">ペルソナ</span>さんの置かれている状況を踏まえ、あなたができることは何がありますか？</p>
+            <h3><span class="persona__name">ペルソナ</span>さんの置かれている状況</h3>
+            <ul>
+                <li><span class="persona__name">ペルソナ</span>さんが実現したいことは<span
+                        class="customer__situation01 futoi_moji"></span>です。<br>
+                </li>
+                <li>実現するにあたり<span class="customer__situation02 futoi_moji"></span>という問題を抱えています。<br></li>
+                <li>その問題を解決するために<span class="customer__situation03 futoi_moji"></span>をしています。</li>
+            </ul>
+            <h3><span class="your__name">あなた</span>さんができることは何?</h3>
             <form action="" id="form__your__solution__value">
-                私は <input type="text" id="your__solution__value" value=""> ができます。<br>
+                <ul>
+                    <li>私は <input type="text" id="your__solution__value" value=""> ができます。</li>
+                </ul>
                 <button id="your__solution__button" value="">クリック</button>
             </form>
         </div><!-- /#your__question01  -->
-        <div id="your__question02">
-            <h2>あなたができること</h2>
-            <p>佐藤さんの置かれている状況に対して私は<span id="your__solution__content"></span>ができます。</p>
-
-            <h2>あなたができることへの質問です</h2>
+        <div class="your__question step02">
+            <h2><span class="your__name">あなた</span>さんができることへの質問です</h2>
+            <h3><span class="persona__name">ペルソナ</span>さんの置かれている状況に対して、あなたができること</h3>
+            <ul>
+                <li>私は<span id="your__solution__content" class="futoi_moji"></span>ができます。</li>
+            </ul>
             <div id="form__your__solution__addvalue">
                 <form action="">
-                    それは、どのような特徴がありますか？<br>
-                    <input type="text" id="your__solution__feature" value=""><br>
-                    それは、どのような効果がありますか？<br>
-                    <input type="text" id="your__solution__effect" value=""><br>
-                    それは、どのような実績がありますか？<br>
-                    <input type="text" id="your__solution__achievement" value=""><br>
-                    それは、どのような感情が生まれますか？<br>
-                    <input type="text" id="your__solution__emotions" value=""><br>
-                    それは、どのような違いがありますか？<br>
-                    <input type="text" id="your__solution__difference" value=""><br>
-                    それは、何かに喩えることはできますか？<br>
-                    <input type="text" id="your__solution__metaphor" value=""><br>
-                    それは、どのような結果をつくりますか？<br>
-                    <input type="text" id="your__solution__result" value=""><br>
-                    それは、どのような状態をつくりますか？<br>
-                    <input type="text" id="your__solution__situation" value=""><br>
+                    <h4>それは、どのような特徴がありますか？</h4>
+                    <ul>
+                        <li><input type="text" id="your__solution__feature" value=""></li>
+                    </ul>
+                    <h4>それは、どのような効果がありますか？</h4>
+                    <ul>
+                        <li><input type="text" id="your__solution__effect" value=""></li>
+                    </ul>
+                    <h4>それは、どのような実績がありますか？</h4>
+                    <ul>
+                        <li><input type="text" id="your__solution__achievement" value=""></li>
+                    </ul>
+                    <h4>それは、どのような感情が生まれますか？</h4>
+                    <ul>
+                        <li><input type="text" id="your__solution__emotions" value=""></li>
+                    </ul>
+                    <h4>それは、どのような違いがありますか？</h4>
+                    <ul>
+                        <li><input type="text" id="your__solution__difference" value=""></li>
+                    </ul>
+                    <h4>それは、何かに喩えることはできますか？</h4>
+                    <ul>
+                        <li><input type="text" id="your__solution__metaphor" value=""></li>
+                    </ul>
+                    <h4>それは、どのような結果をつくりますか？</h4>
+                    <ul>
+                        <li><input type="text" id="your__solution__result" value=""></li>
+                    </ul>
+                    <h4>それは、どのような状態をつくりますか？</h4>
+                    <ul>
+                        <li><input type="text" id="your__solution__situation" value=""></li>
+                    </ul>
                     <button id="your__solution__addvalue__button" value="">クリック</button>
                 </form>
             </div><!-- /#form__your__solution__addvalue -->
-
-            <h2>回答一覧</h2>
-
-            <dl>
-                <dt>どのような特徴がある？</dt>
-                <dd id="your__solution__feature__result"></dd>
-                <dt>どのような効果がある？</dt>
-                <dd id="your__solution__effect__result"></dd>
-                <dt>どのような実績がある？</dt>
-                <dd id="your__solution__achievement__result"></dd>
-                <dt>どのような感情がある？</dt>
-                <dd id="your__solution__emotions__result"></dd>
-                <dt>どのような違いがある？</dt>
-                <dd id="your__solution__difference__result"></dd>
-                <dt>何かに喩えると?</dt>
-                <dd id="your__solution__metaphor__result"></dd>
-                <dt>どのような結果をつくる？</dt>
-                <dd id="your__solution__result__result"></dd>
-                <dt>どのような状態をつくる？</dt>
-                <dd id="your__solution__situation__result"></dd>
-            </dl>
-        </div><!-- /#your__question02  -->
-
-        <div id="your__question03">
-            <h2>組み合わさるとどうなる？</h2>
-            <p id="kitaQ">ここをクリックするとランダムで組み合わせがでます</p>
-            <p id="your_solution_addvalue_comb">結果がでる</p>
-
-            <form action="" id="form__new__yoursolution__value">
-                <input type="text" id="new__yoursolution__value" value=""><br>
-                <button id="new__yoursolution__value__button" value="">クリック</button>
-            </form>
-
-            <p>新しい提案価値は<span class="new__yoursolution"></span>ですよん。</p>
-        </div><!-- /#your__question02  -->
-
-        <div id="your__question04">
-            <div id="your__solution">
-                <h2>あなたの提案価値</h2>
-                <p><span class="new__yoursolution"></span>を踏まえてあなたの提案価値を考えてみてください</p>
-                <form action="">
-                    私は<input type="text" id="" value="">な問題を<br>
-                    <input type="text" id="" value="">な方法で解決し<br>
-                    <input type="text" id="" value="">を作り出します。<br>
-                    <button id="" value="">クリック</button>
-                </form>
-                <p>あなたの提案価値は<span class="">ここに表示</span>ですよん。</p>
-            </div><!-- /#your__solution  -->
         </div><!-- /#your__question03  -->
 
+        <div class="your__question step03">
+            <h2><span class="your__name">あなた</span>さんの価値についての質問です</h2>
+            <dl>
+                <h3>特徴</h3>
+                <ul>
+                    <li id="your__solution__feature__result" class="futoi_moji"></li>
+                </ul>
+                <h3>効果</h3>
+                <ul>
+                    <li id="your__solution__effect__result" class="futoi_moji"></li>
+                </ul>
+                <h3>実績</h3>
+                <ul>
+                    <li id="your__solution__achievement__result" class="futoi_moji"></li>
+                </ul>
+
+                <h3>生み出す感情</h3>
+                <ul>
+                    <li id="your__solution__emotions__result" class="futoi_moji"></li>
+                </ul>
+
+                <h3>違い</h3>
+                <ul>
+                    <li id="your__solution__difference__result" class="futoi_moji"></li>
+                </ul>
+
+                <h3>喩えるなら?</h3>
+                <ul>
+                    <li id="your__solution__metaphor__result" class="futoi_moji"></li>
+                </ul>
+
+                <h3>つくる結果</h3>
+                <ul>
+                    <li id="your__solution__result__result" class="futoi_moji"></li>
+                </ul>
+
+                <h3>つくる状態</h3>
+                <ul>
+                    <li id="your__solution__situation__result" class="futoi_moji"></li>
+                </ul>
+            </dl>
+            <h3>価値を組み合わせたらどんな価値が生まれますか？</h3>
+            <p id="your_solution_addvalue_comb">2つの価値を組み合わせたらどんな価値が生まれますか？</p>
+
+            <form action="" id="form__new__yoursolution__value">
+                <ul>
+                    <li><input type="text" id="new__yoursolution__value" value=""></li>
+                </ul>
+
+                <button id="new__yoursolution__value__button" value="">クリック</button>
+            </form>
+        </div><!-- /.your__question  -->
 
 
+        <div class="your__question step04">
+            <h2><span class="your__name">あなた</span>さんの提案価値を考える</h2>
+            <h3><span class="your__name">あなた</span>さんの価値</h3>
+            <ul>
+                <li id="new__yoursolution" class="futoi_moji"></li>
+            </ul>
+
+            <h3><span class="persona__name">ペルソナ</span>さんの置かれている状況</h3>
+            <ul>
+                <li><span class="persona__name">ペルソナ</span>さんが実現したいことは<span class="customer__situation01"></span>です。<br>
+                </li>
+                <li>実現するにあたり<span class="customer__situation02"></span>という問題を抱えています。<br></li>
+                <li>その問題を解決するために<span class="customer__situation03"></span>をしています。</li>
+            </ul>
+            <h3><span class="your__name">あなた</span>さんの提案価値は何？</h3>
+            <form action="" id="form__valueproposition">
+                <ul>
+                    <li>私は <input type="text" id="valueproposition01" value=""> な問題を</li>
+                    <li>他とは異なる <input type="text" id="valueproposition02" value=""> な方法で解決し</li>
+                    <li><span class="persona__name">ペルソナ</span>さんの心の中に <input type="text" id="valueproposition03"
+                            value=""> なイメージをつくります。
+                    </li>
+                </ul>
+                <button id="valueproposition__button" value="">クリック</button>
+            </form>
+
+        </div><!-- /.your__question  -->
+
+
+        <div class="your__solution">
+            <h2><span class="your__name">あなた</span>さんの提案価値</h2>
+
+            <ul>
+                <li>私は<span class="your__vp01 futoi_moji">価値その1</span>な問題を</li>
+                <li>他とは異なる<span class="your__vp02 futoi_moji">価値その2</span>方法で解決し</li>
+                <li><span class="persona__name">ペルソナ</span>さんの心の中に <span class="your__vp03 futoi_moji">価値その3</span>
+                    なイメージをつくります。
+                </li>
+            </ul>
+
+            <h2><span class="persona__name  \">ペルソナ</span>さんの置かれている状況</h2>
+            <ul>
+                <li><span class="persona__name">ペルソナ</span>さんが実現したいことは<span
+                        class="customer__situation01 futoi_moji"></span>です。<br>
+                </li>
+                <li>実現するにあたり<span class="customer__situation02 futoi_moji"></span>という問題を抱えています。<br></li>
+                <li>その問題を解決するために<span class="customer__situation03 futoi_moji"></span>をしています。</li>
+            </ul>
+            <h2><span class="your__name">あなた</span>さんへ質問です</h2>
+            <p>本当にその価値提案で<span class="persona__name">ペルソナ</span>さんの問題を解決できますか？<br>よーく考えてみてください。</p>
+
+        </div>
+        <!-- /.your__solution -->
 
     </section><!-- /#content__wrapper -->
-
 
     <footer>
         <p class="copyright">(C) Gawasan</p>
     </footer>
+
+
     <script>
 
+        // あなたの名前
+        let yourName;
+
+        // ペルソナの名前
+        let personaName;
+
+        // ペルソナの置かれている状況用の変数を宣言
+        let customerGain;
+        let customerPain;
+        let customerJob;
+
+        // あなたの解決策を代入するための変数を宣言
+        let yourSolution;
+
+        // あなたの解決策の付加価値を代入するための変数を宣言
+        let yourSolutionFeature;
+        let yourSolutionEffect;
+        let yourSolutionAchievement;
+        let yourSolutionEmotions;
+        let yourSolutionDifference;
+        let yourSolutionMetaphor;
+        let yourSolutionResult;
+        let yourSolutionSituation;
+
+        // 提案価値の用の配列
+        let yourSolutionAddvalue = [];
+
+        // 提案価値をランダムに組み合わせるための変数を宣言
+        let AddvaluerandomIndex1 = Math.floor(Math.random() * yourSolutionAddvalue.length)
+        let AddvaluerandomIndex2 = Math.floor(Math.random() * yourSolutionAddvalue.length)
+
+        // 新しいあなたの解決策を代入するための変数を宣言
+        let newYourSolution
+
+        // あなた価値提案を代入するための変数を宣言
+        let valueProPosition01
+        let valueProPosition02
+        let valueProPosition03
 
 
         // 関数式 ペルソナ生成用の乱数生成
@@ -180,71 +306,56 @@
         // ページのDOMツリーを読み込む
         $(document).ready(function () {
 
-            // タイトル画面のみ表示させるため、id="content__wrapper"要素を非表示にする
-            $("#content__wrapper").hide();
+            // タイトル画面のみ表示させるため、要素を非表示にする
+            $("#content__wrapper,footer").hide();
+
+
+            // ##form__yourname内にあるのformのvalueを取得
+            $('#form__yourname').change(function () {
+                // valueから取得した値を変数に格納
+                yourName = $('#yourname').val();
+            });
 
             // id="persona__generate"がして尾された要素をクリックしてペルソナを生成する
-            $('#persona__generate').click(function (e) {
+            $('#yourname__registration__button').click(function (e) {
                 e.preventDefault(); // <a>タグのデフォルト動作を無効化
+
                 // メインコンテンツを表示させる
-                $("#content__wrapper").show();
+                $("#content__wrapper,footer").show();
+
                 // アプリのスタート画面を非表示にする
                 $("#app__title__screen").hide();
 
+                // stepを非表示
+                $(".step01,.step02,.step03,.step04,.your__solution").hide();
+
+                // あなたの名前を表示させる
+                $('.your__name').html(yourName);
+
                 if (personaGenerateNum() == 1) {
-                    $('.persona__ph').html('<img src="./asset/img/persona_01.png" alt="" width="" class="persona__img">');
-                    $('.persona__name').html('佐藤和馬');
+                    personaName = '佐藤和馬';
+                    $('.persona__img').attr('src', './asset/img/persona_01.png');
+                    $('.persona__name,.targrt__persona__name').html(personaName);
                     $('.persona__age').html('35歳');
                     $('.persona__work').html('企画営業');
                     $('.persona__profile__txt').html('九州大学卒業後、福岡市内のIT系企業に入社し、営業職として6年間勤務している。<br>主に大手企業を顧客として担当しており、顧客折衝や契約交渉を担当している。<br>佐藤さんは、最新のビジネス戦略やマーケティングに興味を持っており、新しいビジネスモデルやテクノロジーを習得したいと考えている。また、スキルアップのためのトレーニングやセミナーに参加したいと考えている。<br>目標は、自己成長とキャリアアップであり、将来的にはマネージャーやリーダーとしてチームを率いることを目指している。<br>最近、ビジネスコミュニティに参加したいと考えており、経験や知識を共有する場にも積極的に参加したいと考えている。<br>ビジネス書やニュース記事を読むことが好きで、ビジネスマガジンの定期購読もしている。<br>また、週に2回ジムに通っている。');
                 }
                 else if (personaGenerateNum() == 2) {
-                    $('.persona__ph').html('<img src="./asset/img/persona_02.png" alt="" width="" class="persona__img">');
-                    $('.persona__name').html('佐藤和馬');
-                    $('.persona__age').html('35歳');
-                    $('.persona__work').html('企画営業');
-                    $('.persona__profile__txt').html('プロフィール');
+                    personaName = '田中清治';
+                    $('.persona__img').attr('src', './asset/img/persona_02.png');
+                    $('.persona__name,.targrt__persona__name').html(personaName);
+                    $('.persona__age').html('73歳');
+                    $('.persona__work').html('退職済み（元銀行員）');
+                    $('.persona__profile__txt').html('軽度の高血圧と糖尿病を抱えているが、適切な薬物治療を行い、定期的に医師の診察を受けている。身体能力はまだまだあり、自宅の庭の手入れなども自分で行っている。<br>自分の人生を振り返る時間がある一方で、新しい趣味やアクティビティを見つけたいと考えている。また、高齢者向けの情報やサービスが不足していると感じており、健康や生活面での情報収集が欲しいと思っている。<br>目標は、自分の健康を維持しながら、人生を楽しむことである。また、孫たちとの時間を大切にし、彼らに自分の経験や知識を伝えていきたいと考えている。<br>毎朝新聞を読み、健康に関する情報や世間のニュースをチェックする。また、週に2回は散歩や釣りに出かけている。彼は、自宅で孫たちと一緒に遊ぶことも多く、時には一緒に遊びに出かけることもある。<br>クラシック音楽に興味を持っており、定期的にコンサートに出かけている。また、地域のボランティア活動にも積極的に参加しており、地域の方々との交流を深めている。');
                 } else {
-
-                    $('.persona__ph').html('<img src="./asset/img/persona_03.png" alt="" width="" class="persona__img">');
-                    $('.persona__name').html('佐藤和馬');
-                    $('.persona__age').html('35歳');
-                    $('.persona__work').html('企画営業');
-                    $('.persona__profile__txt').html('プロフィール');
+                    personaName = '山下美月';
+                    $('.persona__img').attr('src', './asset/img/persona_03.png');
+                    $('.persona__name,.targrt__persona__name').html(personaName);
+                    $('.persona__age').html('18歳');
+                    $('.persona__work').html('メイド喫茶のアルバイトスタッフ');
+                    $('.persona__profile__txt').html('アルバイトとしてメイド喫茶で働いて1年が経過している。主な仕事は、ドリンクやフードの提供、接客、ショーケースの整理など。<br>接客スキルの向上やコスプレの技術を磨きたいと考えている。また、他のスタッフとのチームワークを強化し、お客様へのサービス提供を改善するための方法を学びたいと考えている。<br>目標は、高校生活を充実させることと、アルバイトを通じて社会勉強をすることである。将来的には、大学進学を考えており、自己成長を続けながら、様々な経験を積んでいきたいと考えている。<br>勉強に励む一方で、週に2回のダンス教室に通っている。また、コミュニケーション能力を向上させるために、話し方教室にも通っている。<br>コスプレが趣味であり、自分で衣装を作っている。また、アニメやマンガが好きで、週末には友達とコスプレイベントに参加することもある。');
                 }
             });
-
-
-            // ペルソナの置かれている状況用の変数を宣言
-            let customerGain;
-            let customerPain;
-            let customerJob;
-
-            // あなたの解決策を代入するための変数を宣言
-            let yourSolution;
-
-            // あなたの解決策の付加価値を代入するための変数を宣言
-            let yourSolutionFeature;
-            let yourSolutionEffect;
-            let yourSolutionAchievement;
-            let yourSolutionEmotions;
-            let yourSolutionDifference;
-            let yourSolutionMetaphor;
-            let yourSolutionResult;
-            let yourSolutionSituation;
-
-            // 提案価値の用の配列
-            let yourSolutionAddvalue = [];
-
-            // 提案価値をランダムに組み合わせるための変数を宣言
-            let AddvaluerandomIndex1 = Math.floor(Math.random() * yourSolutionAddvalue.length)
-            let AddvaluerandomIndex2 = Math.floor(Math.random() * yourSolutionAddvalue.length)
-
-            // 新しいあなたの解決策を代入するための変数を宣言
-            let newYourSolution
-
-
-
 
 
             // ##form__customer__situation内にあるのformのvalueを取得
@@ -259,9 +370,11 @@
             $('#customer__situation__button').click(function (e) {
                 e.preventDefault(); // フォームのデフォルト動作を無効化
                 // 変数の値を指定したIDを持つ要素にに表示
-                $('#customer__situation01').html(customerGain);
-                $('#customer__situation02').html(customerPain);
-                $('#customer__situation03').html(customerJob);
+                $('.customer__situation01').html(customerGain);
+                $('.customer__situation02').html(customerPain);
+                $('.customer__situation03').html(customerJob);
+                // .step01を表示させる
+                $(".step01").show();
             });
 
 
@@ -270,7 +383,6 @@
             $('#form__your__solution__value').change(function () {
                 // valueから取得した値を変数に格納
                 yourSolution = $('#your__solution__value').val();
-
             });
 
             // あなたのできること
@@ -278,6 +390,8 @@
                 e.preventDefault(); // フォームのデフォルト動作を無効化
                 // 変数の値を指定したIDを持つ要素にに表示
                 $('#your__solution__content').html(yourSolution);
+                // .step02を表示させる
+                $(".step02").show();
             });
 
 
@@ -294,10 +408,7 @@
                 yourSolutionSituation = $('#your__solution__situation').val();
                 yourSolutionAddvalue = [yourSolutionFeature, yourSolutionEffect, yourSolutionAchievement, yourSolutionEmotions, yourSolutionDifference, yourSolutionMetaphor, yourSolutionResult, yourSolutionSituation];
                 randomIndex1 = Math.floor(Math.random() * yourSolutionAddvalue.length);
-                console.log(randomIndex1);
-
             });
-
 
 
             // button##your__solution__buttonをクリックしてあなたの解決策をを表示
@@ -312,48 +423,54 @@
                 $('#your__solution__metaphor__result').html(yourSolutionMetaphor);
                 $('#your__solution__result__result').html(yourSolutionResult);
                 $('#your__solution__situation__result').html(yourSolutionSituation);
-                // console.log(yourSolutionAddvalue[0], yourSolutionAddvalue[1], yourSolutionAddvalue[2]);
-            });
 
-
-
-
-            // 提案価値の組み合わせ
-            $('#kitaQ').click(function () {
                 // 同じ配列要素が選ばれないようにする
                 while (AddvaluerandomIndex1 === AddvaluerandomIndex2) {
                     AddvaluerandomIndex2 = Math.floor(Math.random() * yourSolutionAddvalue.length)
                 }
-                $('#your_solution_addvalue_comb').html(yourSolutionAddvalue[AddvaluerandomIndex1] + "と" + yourSolutionAddvalue[AddvaluerandomIndex2] + "を組み合わせたらどんな価値が生まれる？");
+                $('#your_solution_addvalue_comb').html(yourSolutionAddvalue[AddvaluerandomIndex1] + "と" + yourSolutionAddvalue[AddvaluerandomIndex2]);
+                // .step03を表示させる
+                $(".step03").show();
             });
 
 
-
-            // 新しいあなたの提案価値
+            // 価値×価値を取得
             $('#form__new__yoursolution__value').change(function () {
                 // valueから取得した値を変数に格納
                 newYourSolution = $('#new__yoursolution__value').val();
-
             });
 
-            // 新しいあなたの提案価値をひょうじ
+            // 価値×価値を表示
             $('#new__yoursolution__value__button').click(function (e) {
                 e.preventDefault(); // フォームのデフォルト動作を無効化
                 // 変数の値を指定したIDを持つ要素にに表示
-                $('.new__yoursolution').html(newYourSolution + yourSolutionFeature);
+                $('#new__yoursolution').html(newYourSolution);
+                $('.customer__situation01').html(customerGain);
+                $('.customer__situation02').html(customerPain);
+                $('.customer__situation03').html(customerJob);
+                // .step04を表示させる
+                $(".step04").show();
             });
 
 
+            // 提案価値を取得
+            $('#form__valueproposition').change(function () {
+                // valueから取得した値を変数に格納
+                valueProPosition01 = $('#valueproposition01').val();
+                valueProPosition02 = $('#valueproposition02').val();
+                valueProPosition03 = $('#valueproposition03').val();
+            });
 
-
-
-
-
-
-
-
-
-
+            // 提案価値を表示
+            $('#valueproposition__button').click(function (e) {
+                e.preventDefault(); // フォームのデフォルト動作を無効化
+                // 変数の値を指定したIDを持つ要素にに表示
+                $('.your__vp01').html(valueProPosition01);
+                $('.your__vp02').html(valueProPosition02);
+                $('.your__vp03').html(valueProPosition03);
+                // .your__solutionを表示させる
+                $(".your__solution").show();
+            });
 
 
 
