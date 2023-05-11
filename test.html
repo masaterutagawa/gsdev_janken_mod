@@ -19,19 +19,41 @@
 
 
 
-        function aaaa() {
-            var p = document.createElement('li');
-            p.textContent = 'テスト';
-            document.body.appendChild(p);
-        }
+        // 関数式 生成用の乱数生成
+        let num01 = function () {
+            // 生成したい乱数をminからmaxで指定
+            const min = 0;
+            const max = 6;
+            // Math.randomで0以上1未満の乱数を生成し、Math.floorで小数点を切り落とす。切り落とすので+1を指定
+            const numA = Math.floor(Math.random() * (max - min + 1)) + min;
+            // 戻り値として乱数を返す
+            return numA;
+        };
 
-        aaaa();
-        aaaa();
-        aaaa();
+
+
+
+        $(document).ready(function () {
 
 
 
 
+
+            // forの練習
+            let abcd = ['あ', 'い', 'う', 'え', 'お', 'か', 'き', 'く'];
+
+            // 価値をランダムに組み合わせるための変数を宣言
+            let valueRandomIndex1 = Math.floor(Math.random() * abcd.length);
+            let valueRandomIndex2 = Math.floor(Math.random() * abcd.length);
+
+            for (let i = 0; i <= 7; i++) {
+                // abcdの組み合わせをランダムで出力
+                console.log(abcd[valueRandomIndex1] + "と" + abcd[valueRandomIndex2]);
+
+            }
+
+
+        });
 
 
     </script>
