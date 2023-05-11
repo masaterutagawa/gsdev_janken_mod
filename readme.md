@@ -4,7 +4,7 @@
 
 ## DEMO
 
-- 未デプロイ
+- https://masaterutagawa.github.io/gsdev_janken_mod/
 
 ## 紹介と使い方
 
